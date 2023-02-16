@@ -26,22 +26,41 @@ Giá trị đúng và sai tương ứng là True và False<br />
           
  Một số phép so sánh thông thường như < (bé hơn), <= (béhơn hoặc bằng), > (lớn hơn), >= (lớn hơn hoặc bằng), ==
 (bằng), != (khác) để so sánh 2 giá trị.<br />
-    ví du:<br />
-    x = 2<br />
-    1 < x < 3 # True<br />
-    10 < x < 20 # False<br />
-    3 > x <= 2 # True<br />
-    2 == x < 4 # True<br />
-    Ngoài ra còn toán tử kiểm tra phần tử tồn tại trong tập hợp in<br />
-    #3.Cấu trúc điều kiện<br />
-      #3.1 If...elif...else<br />
-      if condition1 :<br />
-          indentedStatementBlockForTrueCondition1
-      elif condition2 :
-          indentedStatementBlockForFirstTrueCondition2
-elif condition3 :
-indentedStatementBlockForFirstTrueCondition3
-elif condition4 :
-indentedStatementBlockForFirstTrueCondition4
-else:
-indentedStatementBlockForEachConditionFalse
+ ví du:
+ 
+            x = 2
+            1 < x < 3 # True
+            10 < x < 20 # False
+            3 > x <= 2 # True
+            2 == x < 4 # True
+            
+  Ngoài ra còn toán tử kiểm tra phần tử tồn tại trong tập hợp in<br />
+  3.Cấu trúc điều kiện<br />
+  3.1 If...elif...else
+  
+            if condition1 :
+                indentedStatementBlockForTrueCondition1
+            elif condition2 :
+                indentedStatementBlockForFirstTrueCondition2
+            elif condition3 :
+                indentedStatementBlockForFirstTrueCondition3
+            elif condition4 :
+                indentedStatementBlockForFirstTrueCondition4
+            else:
+                indentedStatementBlockForEachConditionFalse
+                
+  3.2 For...in
+    
+            for iterating_var in sequence:
+                statements(s)
+                
+  ví dụ:
+  
+            for letter in 'Python': # First Example
+                print 'Current Letter :', letter
+
+            fruits = ['banana', 'apple', 'mango']
+            for fruit in fruits: # Second Example
+                print 'Current fruit :', fruit
+
+            print "Good bye!"
