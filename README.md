@@ -64,3 +64,49 @@ Giá trị đúng và sai tương ứng là True và False<br />
                 print 'Current fruit :', fruit
 
             print "Good bye!"
+   
+  Kết quả hiển thị của ví dụ trên:
+  
+            Current Letter : P
+            Current Letter : y
+            Current Letter : t
+            Current Letter : h
+            Current Letter : o
+            Current Letter : n
+            Current fruit : banana
+            Current fruit : apple
+            Current fruit : mango
+            Good bye!
+            
+  3.3 While
+  
+            while expression:
+                statement(s)
+                
+  ví dụ:
+  
+            count = 0
+            while (count < 9):
+                print 'The count is:', count
+                count = count + 1
+
+            print "Good bye!"
+            
+  Kết quả hiển thị của ví dụ trên:
+  
+            The count is: 0
+            The count is: 1
+            The count is: 2
+            The count is: 3
+            The count is: 4
+            The count is: 5
+            The count is: 6
+            The count is: 7
+            The count is: 8
+            Good bye!
+  4.Hàm
+  
+            
+   
+  
+  
