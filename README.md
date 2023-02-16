@@ -57,13 +57,13 @@ Giá trị đúng và sai tương ứng là True và False<br />
   ví dụ:
   
             for letter in 'Python': # First Example
-                print 'Current Letter :', letter
+                print ('Current Letter :', letter)
 
             fruits = ['banana', 'apple', 'mango']
             for fruit in fruits: # Second Example
-                print 'Current fruit :', fruit
+                print ('Current fruit :', fruit)
 
-            print "Good bye!"
+            print("Good bye!")
    
   Kết quả hiển thị của ví dụ trên:
   
@@ -90,7 +90,7 @@ Giá trị đúng và sai tương ứng là True và False<br />
                 print 'The count is:', count
                 count = count + 1
 
-            print "Good bye!"
+            print ("Good bye!")
             
   Kết quả hiển thị của ví dụ trên:
   
@@ -119,7 +119,7 @@ Giá trị đúng và sai tương ứng là True và False<br />
   Cách gọi hàm:
   
             sum(1, 2)
-                (trả về giá trị là 3)
+            (trả về giá trị là 3)
                 
   5.Xử lí chuỗi<br />
   Một chuỗi có thể khai báo bằng dấu nháy đôi " hoặc đơn'. Ví dụ các chuỗi sau:
@@ -144,16 +144,16 @@ Giá trị đúng và sai tương ứng là True và False<br />
 
             str = 'Hello world'
 
-            print str[0:4]
+            print(str[0:4])
             (Hiển thị "Hell")
 
-            print str[:4]
+            print(str[:4])
             (Hiển thị "Hell")
 
-            print str[-3:]
+            print(str[-3:])
             (Hiển thị "rld")
 
-            print str[6:-3]
+            print(str[6:-3])
             (Hiển thị "wo")
     
    - Lấy độ dài chuỗi: Sử dụng hàm len(...) để trả về độ dài của chuỗi. Ví dụ:
@@ -166,24 +166,24 @@ Giá trị đúng và sai tương ứng là True và False<br />
     
             str = 'Hello world'
             newstr = str.replace('Hello', 'Bye')
-            print newstr
+            print(newstr)
             (Sẽ hiển thị chuỗi "Bye world" trên màn hình)
             
    - Tìm vị trí chuỗi con:Có thể tìm vị trí của một chuỗi con trong chuỗi lớn bằng cách 
    gọi phương thức find(str, beg=0 end=len(string)). Bắt đầu là vị trí 0 , nếu không tìm ra thì trả về -1
     
             str = 'Hello world'
-            print str.find('world')
+            print(str.find('world'))
             (hiển thị 6)
 
-            print str.find('Bye');
+            print(str.find('Bye'))
             (hiển thị -1)
             
    Hàm find() sẽ tìm theo thứ tự từ trái qua phải của chuỗi,Có thể dùng hàm rfind()để tìm theo vị trí từ cuối chuỗi về phía trước.<br />
    - Tách chuỗi : tách chuỗi dựa theo một chuỗi delimeter bằng cách gọi phương thức split(str="", num=string.count(str))
     
             str = 'Hello world'
-            print str.split(' ')
+            print(str.split(' '))
             (Trả về một mảng có 2 phần tử là 2 chuỗi "Hello" và "world")
            
    6.List<br />
@@ -194,13 +194,13 @@ Giá trị đúng và sai tương ứng là True và False<br />
             
    Có thể truy xuất từng phần tử của mảng bằng index,phần tử đầu tiên có thứ tự là 0
     
-            print numbers[0]
+            print(numbers[0])
             (Hiển thị 1)
 
-            print numbers[-3]
+            print(numbers[-3])
             (Hiển thị 3)
 
-            print names[1]
+            print(names[1])
             (Hiển thị 'Peter')
             
    Để biết được số lượng phần tử của 1 List, có thể sử dụng hàm len(array) để lấy số lượng phần tử của mảng tham số truyền vào.<br />
@@ -209,10 +209,10 @@ Giá trị đúng và sai tương ứng là True và False<br />
    chuỗi ( 0 ) và end là đến vị trí cuối chuỗi. Ví dụ:
      
             numbers = ['a', 'b', 'c', 'd']
-            print numbers[:2]
+            print(numbers[:2])
             (Hiển thị ['a', 'b'])
 
-            print numbers[-2:]
+            print(numbers[-2:])
             (Hiển thị ['c', 'd'])
             
    - Xóa phần tử của mảng <br />
@@ -220,16 +220,92 @@ Giá trị đúng và sai tương ứng là True và False<br />
    
             numbers = [1, 2, 3, 4, 5]
             del numbers[0]
-            print numbers
+            print(numbers)
             (Hiển thị [2, 3, 4, 5])
             
    Có thể xóa một khoảng dựa vào toán tử lấy khoản [start:end] . Ví dụ:
    
             numbers = [1, 2, 3, 4, 5, 6, 7]
             del numbers[2:4]
-            print numbers
+            print(numbers)
             (Hiển thị [1, 2, 5, 6, 7])
    
-   - Nối 2 mảng
-   - Thêm phần tử vào mảng
-   - Lấy phần tử cuối mảng
+   - Nối 2 mảng <br />
+   Có thể sử dụng toán tử + để nối giá trị của 2 mảng và tạo ra một mảng lớn có số lượng phần tử là tổng sốlượng phần tử của 2 mảng con. Ví dụ:
+   
+            a = [1, 2]
+            b = [1, 3]
+            print(a + b)
+            (Hiển thị [1, 2, 1, 3])
+   
+   - Thêm phần tử vào mảng <br />
+   Nếu bạn muốn thêm phần tử vào một mảng đã tồn tại,hãy dùng phương thức list.append(newvalue) để thêm phần tử có giá trị newvalue vào cuối mảng list
+   
+            numbers = [1, 2, 3]
+            numbers.append(4)
+            print(numbers)
+            (Hiển thị [1, 2, 3, 4]
+
+   - Lấy phần tử cuối mảng <br />
+   Nếu muốn lấy phần tử cuối cùng của mảng ra khỏi mảng,có thể sử dụng phương thức list.pop() , sẽ trả về giá trịcủa phần tử cuối cùng và mảng bây giờ 
+   sẽ không còn phần tử này.
+   
+            numbers = [1, 2, 3]
+            mynumber = numbers.pop()
+            print(mynumber)
+            (Hiển thị 3)
+
+            print(numbers)
+            (Hiển thị [1, 2])
+            
+   -Tìm một giá trị trong mảng <br />
+   Nếu bạn muốn tìm vị trí (index) của một giá trị trong một mảng, có thể dùng phương thức list.index(obj) . Nếutìm thấy sẽ trả về index của phần tử đầu 
+   tiên tìm thấy.
+            
+            aList = [123, 'xyz', 'zara', 'abc'];
+
+            print("Index for xyz : ", aList.index('xyz'))
+            print("Index for zara : ", aList.index('zara'))
+            
+   Khi chạy sẽ hiển thị kết quả:
+   
+            Index for xyz : 1
+            Index for zara : 2
+            
+   7.Tuple <br />
+   Tuple cũng là một cấu trúc mảng, tương tự như cấu trúc List. Một số điểm khác nhau cơ bản là khai báo Tuple sử
+   dụng cặp dấu ngoặc (...) và một tuple đã được khai báo rồi thì không thay đổi được giá trị (immutable) và không hỗ
+   trợ các phương thức như append() , pop() ...Ví dụ:
+   
+            mytuple = ('x', 'y', 'z')
+            print(mytuple)
+            (Hiển thị ('x', 'y', 'z'))
+   
+   Vẫn hỗ trợ các cách để truy xuất phần tử giống List như là truy xuất theo index, range, tìm kiếm...
+   
+   8.Dictionary <br />
+   Dictionary cũng là một cấu trúc mảng, nhưng các phần tử bao gồm key và value.     
+   
+            point = {'x': 1, 'y': 2}
+            
+   Truy xuất một giá trị dựa vào key của đối tượng. Ví dụ:
+   
+            point = {'x': 3, 'y': 6, 'z' : 9}
+            print(point[x])
+            (Hiển thị 3)
+            
+   - Thêm 1 phần tử : Để thêm một phần tử vào đối tượng đã khai báo, sử dụng cấu trúc dict[key] = value . Ví dụ:
+
+            user = {'name': 'Jone', 'age': 30}
+            user['country'] = 'Vietnam'
+            print(user)
+            (Hiển thị {'country': 'Vietnam', 'age': 30, 'name':'Jone'})
+            
+   Một số hàm, phương thức thông dụng:
+   - dict.clear() : Xóa toàn bộ dữ liệu bên trong đối tượng
+   - dict.copy() : Trả về một bản copy của đối tượng
+   - dict.fromkeys(seq[, value]) : Tạo một đối tượng với danh sách key từ seq và nếu có truyền value thì lấy đó làm giá trị cho các phần tử.
+   - dict.has_key(key) : kiểm tra một key có tồn tại trong đối tượng hay không.
+   - dict.keys() : Trả về một List chứa các key
+   - dict.values() : Trả về một List chứa các value
+            
